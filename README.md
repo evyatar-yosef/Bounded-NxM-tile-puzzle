@@ -6,6 +6,7 @@ in white and part painted in red. In addition, on each white block is written ho
 any, and the goal is to find the cheapest number of operations from the initial arrangement to the final state. In the final state all the blocks
 arranged from 1 to 1NxM from left to right and from top to bottom (regardless of their color), with the empty block in the right corner
 bottom For example, if the board is 4x3 then the final state is:
+
 1 2 3 4
 
 5 6 7 8
@@ -19,6 +20,7 @@ Suitable for the normal puzzle-tile game, where each move counts as one step, in
 which depend on the color of the block. Moving a white block costs 1, we want to move it to the empty block only if we have not exceeded the number of moves
 allowed for him. Moving a block to the empty block costs 30, and there is no limit to the amount of moves that can be made with it. For example, if
 The board is in this state, when blocks 7 and 11 are red, and block 6 is white with a move limit of: 1
+
 1 2 3 4
 
 5 " " 6 8 
