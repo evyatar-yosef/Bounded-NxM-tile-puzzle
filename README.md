@@ -1,13 +1,17 @@
 ## Bounded-NxM-tile-puzzle
 #implement a search engine that supports a number of search algorithms to solve the NxM Bounded puzzle game.
+
 In the game there is a board of size NxM containing -1NxM blocks numbered from 1 to -1NxM and an empty block. Some of the blocks are painted
 in white and part painted in red. In addition, on each white block is written how many moves can be made with it. The blocks are arranged in a given starting order
 any, and the goal is to find the cheapest number of operations from the initial arrangement to the final state. In the final state all the blocks
 arranged from 1 to 1NxM from left to right and from top to bottom (regardless of their color), with the empty block in the right corner
 bottom For example, if the board is 4x3 then the final state is:
 1 2 3 4
+
 5 6 7 8
+
 9 10 11 " "
+
 
 Note that the color of each block and the amount of allowed moves of the white blocks are part of the definition of the initial state.
 the actions
@@ -15,11 +19,14 @@ Suitable for the normal puzzle-tile game, where each move counts as one step, in
 which depend on the color of the block. Moving a white block costs 1, we want to move it to the empty block only if we have not exceeded the number of moves
 allowed for him. Moving a block to the empty block costs 30, and there is no limit to the amount of moves that can be made with it. For example, if
 The board is in this state, when blocks 7 and 11 are red, and block 6 is white with a move limit of: 1
+1 2 3 4
+
+5 " " 6 8 
+
+9 10 7 11
+
 We can move 6 to the left and then we can't move it anymore. Then we can move 7 up and 11 to the left, to reach the position
 the final The cost of the described route will be 62=30 + 1+30
-1 2 3 4
-5 6 8
-9 10 7 11
 
 
 The program will read all its input from a single file - txt.input. The first line in the file will determine which algorithm to use:
